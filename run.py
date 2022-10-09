@@ -39,14 +39,14 @@ def shoot_your_shot():
     """
     takes input from the player and warns the player if the input is correct or not
     """
-    row = input("Enter the row you wish to hit: ").upper()
+    row = input("Enter the row you wish to hit: \n").upper()
     while row not in "12345678":
         print('Where are you aiming at?')
-        row = input("Enter the row you wish to hit: ").upper()
-    column = input("Enter the column you wish to hit: ").upper()
+        row = input("Enter the row you wish to hit: \n").upper()
+    column = input("Enter the column you wish to hit: \n").upper()
     while column not in "ABCDEFGH":
         print('Where are you aiming at?')
-        column = input("Enter the column you wish to hit: ").upper()
+        column = input("Enter the column you wish to hit: \n").upper()
     return int(row) - 1, letters_to_numbers[column]
 
 def ships_hit(board):
