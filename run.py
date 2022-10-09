@@ -29,3 +29,14 @@ def spawn_ships(board):
         while board[ship_row][ship_column] == "X":
             ship_row, ship_column = shoot_your_shot()
         board[ship_row][ship_column] = "X"
+
+def shoot_your_shot():
+    row = input("Enter the row you wish to hit: ").upper()
+    while row not in "12345678":
+        print('Where are you aiming at?')
+        row = input("Enter the row you wish to hit: ").upper()
+    column = input("Enter the column you wish to hit: ").upper()
+    while column not in "ABCDEFGH":
+        print('Where are you aiming at?')
+        column = input("Enter the column you wish to hit: ").upper()
+    return int(row) - 1, letters_to_numbers[column]
